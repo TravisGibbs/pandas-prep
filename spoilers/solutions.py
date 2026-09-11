@@ -4,7 +4,7 @@ Reference solutions for practice_questions.md.
 Open this only after you've had a go yourself. The point is not that your code
 matches mine — it's that you hit the same traps and handled them deliberately.
 
-Run: python3 solutions.py
+Run: python3 spoilers/solutions.py
 """
 
 import ast
@@ -18,7 +18,8 @@ pd.set_option("display.max_columns", None)
 pd.set_option("display.width", 200)
 
 CURRENT_YEAR = 2026
-DATA = Path(__file__).parent / "data"
+ROOT = Path(__file__).parent.parent
+DATA = ROOT / "data"
 
 
 def rule(label):
@@ -342,7 +343,7 @@ print(clean.dropna(subset=["country_clean"])
 cols = ["name_clean", "country_clean", "population", "area_sq_km", "density",
         "lat", "lon", "utc_offset", "avg_temp_c", "transit_trips_per_capita",
         "car_ownership_rate", "founded_year"]
-clean[cols].to_csv(Path(__file__).parent / "cities_clean.csv", index=False)
+clean[cols].to_csv(ROOT / "cities_clean.csv", index=False)
 print(f"\nQ21 — wrote cities_clean.csv ({len(clean)} rows, {len(cols)} columns)")
 
 # Q24 — JSONL reload

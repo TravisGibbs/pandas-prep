@@ -4,7 +4,7 @@ Work these against the practice file. Time yourself: the real thing is likely
 30–45 minutes total including the load-and-explore phase, so you want the warmup
 questions answered in 2–3 minutes each.
 
-Try them before opening `solutions.py`.
+Try them before opening `spoilers/solutions.py`.
 
 ---
 
